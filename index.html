@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <div class="main-section">
+        <video src="./video/Uzbekistan.mp4" id="myVideo" loop muted autoplay></video>
+        <div class="LeftSide">
+            <div class="logo">
+                <a href="./index.html">
+                    <img src="./img/logoArabia.png" alt="logo">
+                </a>
+            </div>
+            <div class="left-bar">
+                <ul class="left-items">
+                    <li class="left-item">
+                        <a href="#box1" class="left-link">
+                            компания
+                        </a>
+                    </li>
+                    <li class="left-item">
+                        <a href="#box2" class="left-link">
+                            деятельность
+                        </a>
+                    </li>
+                    <li class="left-item">
+                        <a href="#box3" class="left-link">
+                            экосистема
+                        </a>
+                    </li>
+                    <li class="left-item">
+                        <a href="#box4" class="left-link">
+                            ответственность
+                        </a>
+                    </li>
+                    <li class="left-item">
+                        <a href="#box5" class="left-link">
+                            миссия
+                        </a>
+                    </li>
+                    <li class="left-item">
+                        <a href="#box6" class="left-link">
+                            новости
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="left-volum__box">
+                <div id="equalizer">
+                    <div id="horizontal"></div>
+                    <div id="vertical-lines">
+                    <div class="vertical eq"D></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    <div class="vertical eq"></div>
+                    </div>
+                </div>
+
+                <div class="left-volum__icon">
+                    <i class="fa-solid fa-volume-off"></i>
+                    <i class="fa-solid fa-volume-high"></i>
+                </div>
+            </div>
+            <input id="vol-control" type="range" min="0" max="100" step="1" value="100" class="range blue"  oninput="SetVolume(this.value)" onchange="SetVolume(this.value)"/>
+
+        </div>
+        <div class="Center">
+            <div class=" burger-box" id="burger-box"> </div>
+            <div class="center-box" id="box1"> </div>
+            <div class="center-box" id="box2"> </div>
+            <div class="center-box" id="box3"> </div>
+            <div class="center-box" id="box4"> </div>
+            <div class="center-box" id="box5"> </div>
+            <div class="center-box" id="box6"> </div>
+        </div>
+        <div class="RightSide">
+            <span class="burger-wrapper">
+                <span class="burger-inner"></span>
+            </span>
+            <div class="right-menu">
+                <div class="right-menu__open">
+                    Меню
+                </div>
+                <div class="right-menu__close">
+                    Закрыть
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
