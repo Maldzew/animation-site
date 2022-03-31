@@ -31,8 +31,7 @@
     }
 
     ///// Equalizer volume code
-    function SetVolume(val)
-    {
+    function SetVolume(val) {
         let player = document.getElementById('myVideo');
         console.log('Before: ' + player.volume);
         player.volume = val / 100;
@@ -55,7 +54,6 @@
 
         rightMenuOpen.addEventListener('click',()=> {
             burgerBtn.classList.add('burgerBtn');
-
             burgerBox.classList.add('burgerBox');
             rightMenuOpen.classList.add('rightMenuOpen');
             rightMenuClose.classList.add('rightMenuClose');
@@ -63,10 +61,44 @@
 
         rightMenuClose.addEventListener('click',()=> {
             burgerBtn.classList.remove('burgerBtn');
-
             burgerBox.classList.remove('burgerBox');
             rightMenuOpen.classList.remove('rightMenuOpen');
-
             rightMenuClose.classList.remove('rightMenuClose');
-
         });
+
+
+
+    let sliderIndex = 1;
+    let timeout;
+    const layers = [...document.querySelectorAll('.layer')];
+    const covers = [...document.querySelectorAll('.photo-frame')];
+
+    function changeCoverAnimState(state = 0) {
+    const st = state === 1 ? 'running' : 'paused';
+    covers.forEach(cover => {
+        cover.querySelector('.cover').style.width = `${state * 100}%`;
+    });
+    }
+
+    function switchLayer(step = 1) {
+        const nextSlide = (sliderIndex + step) % 3 === 0 ? 3 : (sliderIndex + step) % 3;
+    
+        changeCoverAnimState(1);
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            changeCoverAnimState(0)
+        }, 500);
+    
+        for(let i of layers) {
+            i.classList.remove('layer-displayed');
+            i.classList.remove('layer-displayed-exit');
+            if(i.dataset.scene == nextSlide) {
+            i.classList.add('layer-displayed');
+            }
+            if(i.dataset.scene == sliderIndex) {
+            i.classList.add('layer-displayed-exit');
+            }
+        }
+        
+        sliderIndex = nextSlide;
+    }
